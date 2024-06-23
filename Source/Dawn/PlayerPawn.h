@@ -27,10 +27,10 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Settings|Camera")
-	float MovementSpeed = 20.0f;
+	float MovementSpeed = 10.0f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Settings|Camera")
-	float RotationSpeed = 20.0f;
+	float RotationSpeed = 5.0f;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Settings|Camera")
 	float RotationPitchMin = 10.0f;
@@ -48,6 +48,9 @@ protected:
 	float MaxZoom = 4000.0f;
 
 private:
+
+	UFUNCTION()
+	void CameraBounds();
 
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class USceneComponent> SceneRootComponent;
@@ -68,7 +71,15 @@ private:
 	float TargetZoom;
 
 	UPROPERTY()
-	bool CanRotate;
+	bool CanRotate = false;
+
+	/*Enhanced Input*/
+	UFUNCTION()
+	void Move(const FInputActionValue& Value);
+	void Zoom(const FInputActionValue& Value);
+	//void EnableRotation(const FInputActionValue& Value) { CanRotate = true; }
+	//void DisableRotation(const FInputActionValue& Value) { CanRotate = false;}
+	void Rotate(const FInputActionValue& Value);
 
 
 };

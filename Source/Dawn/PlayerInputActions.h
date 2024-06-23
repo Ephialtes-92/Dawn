@@ -25,17 +25,28 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
 	UInputAction* Move;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
+	UInputAction* Zoom;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
+	UInputAction* Rotate;
+
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
+	UInputAction* ToggleRotation;
+
 	
 };
 
 namespace EPlayerInputActions
 {
 	template<class T, class FuncType>
-	void BindInput_TriggerOnly(UEnhancedInputComponent* Input, const UInputAction* Action, T* Obj, FuncType TriggerFunc)
+	void BindInput(UEnhancedInputComponent* Input, const UInputAction* Action, ETriggerEvent Event, T* Obj, FuncType TriggerFunc)
 	{
 		if (TriggerFunc)
 		{
-			Input->BindAction(Action, ETriggerEvent::Triggered, Obj, TriggerFunc);
+			Input->BindAction(Action, Event, Obj, TriggerFunc);
 		}
 	}
 
