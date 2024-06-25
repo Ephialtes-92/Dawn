@@ -53,6 +53,14 @@ void ADefaultPlayerController::SetInputDefault(const bool Enabled) const
 	}
 }
 
+void ADefaultPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	bShowMouseCursor = true;
+
+}
+
 void ADefaultPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
