@@ -32,9 +32,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
 	UInputAction* Rotate;
 
-	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Default")
-	UInputAction* ToggleRotation;
+	UInputAction* LeftClick;
+
+	
 
 	
 };

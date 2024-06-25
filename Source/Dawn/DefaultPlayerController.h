@@ -10,6 +10,13 @@
  * 
  */
 
+enum class EControllerState : uint8 
+{
+	Default,
+	PlacingBuilding
+
+};
+
 class UInputMappingContext;
 
 UCLASS()
@@ -29,7 +36,10 @@ public:
 	void SetInputDefault(const bool Enabled = true) const;
 
 	UFUNCTION()
-	UDataAsset* GetInputActionsAsset() const { return PlayerActionsAsset; };
+	UDataAsset* GetInputActionsAsset() const { return PlayerInputActions; };
+
+	void SetState(EControllerState NewState) { State = NewState; }
+	EControllerState GetState() const { return State; }
 
 
 protected:
@@ -39,10 +49,18 @@ protected:
 
 	virtual void SetupInputComponent() override;
 
-	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Player Settings")
-	UDataAsset* PlayerActionsAsset;
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+	UDataAsset* PlayerInputActions;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+	TObjectPtr<class ABuildingManager> BuildingManager;
+
 
 private:
 
 	FVector TargetLocation;
+	EControllerState State = EControllerState::Default;
+
+	void HandleLeftClick();
+
 };

@@ -20,6 +20,8 @@ public:
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void SpawnBuilding();
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -32,8 +34,10 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ABuilding> TypeOfBuildingToBeSpawned;
 
-	class APlayerController* PlayerController;
+	class ADefaultPlayerController* PlayerController;
 	class UWorld* GameWorld;
+
+	void SnapBuildingToCursor();
 
 
 };

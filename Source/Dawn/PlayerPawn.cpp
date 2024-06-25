@@ -82,8 +82,6 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 		{
 			EPlayerInputActions::BindInput(Input, PlayerActions->Move, ETriggerEvent::Triggered, this, &APlayerPawn::Move);
 			EPlayerInputActions::BindInput(Input, PlayerActions->Zoom, ETriggerEvent::Triggered, this, &APlayerPawn::Zoom);
-			//EPlayerInputActions::BindInput(Input, PlayerActions->ToggleRotation, ETriggerEvent::Started, this, &APlayerPawn::EnableRotation);
-			//EPlayerInputActions::BindInput(Input, PlayerActions->ToggleRotation, ETriggerEvent::Completed, this, &APlayerPawn::DisableRotation);
 			EPlayerInputActions::BindInput(Input, PlayerActions->Rotate, ETriggerEvent::Triggered, this, &APlayerPawn::Rotate);
 
 

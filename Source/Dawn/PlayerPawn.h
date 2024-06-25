@@ -77,8 +77,6 @@ private:
 	UFUNCTION()
 	void Move(const FInputActionValue& Value);
 	void Zoom(const FInputActionValue& Value);
-	//void EnableRotation(const FInputActionValue& Value) { CanRotate = true; }
-	//void DisableRotation(const FInputActionValue& Value) { CanRotate = false;}
 	void Rotate(const FInputActionValue& Value);
 
 

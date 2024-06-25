@@ -2,6 +2,9 @@
 
 
 #include "DefaultPlayerController.h"
+#include "BuildingManager.h"
+#include "Kismet/GamePlayStatics.h"
+
 #include "EnhancedInputSubsystems.h"
 #include "PlayerInputActions.h"
 
@@ -35,9 +38,9 @@ void ADefaultPlayerController::RemoveInputMapping(const UInputMappingContext* In
 
 void ADefaultPlayerController::SetInputDefault(const bool Enabled) const
 {
-	ensureAlwaysMsgf(PlayerActionsAsset, TEXT("PlayerActionsAsset is NULL!"));
+	ensureAlwaysMsgf(PlayerInputActions, TEXT("PlayerActionsAsset is NULL!"));
 
-	const UPlayerInputActions* PlayerActions = Cast<UPlayerInputActions>(PlayerActionsAsset);
+	const UPlayerInputActions* PlayerActions = Cast<UPlayerInputActions>(PlayerInputActions);
 	if (PlayerActions)
 	{
 		ensure(PlayerActions->MappingContextDefault);
@@ -59,6 +62,9 @@ void ADefaultPlayerController::BeginPlay()
 
 	bShowMouseCursor = true;
 
+	BuildingManager = Cast<ABuildingManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ABuildingManager::StaticClass()));
+	ensureAlwaysMsgf(BuildingManager, TEXT("no instance of BuildingManager foundb!"));
+
 }
 
 void ADefaultPlayerController::SetupInputComponent()
@@ -69,5 +75,24 @@ void ADefaultPlayerController::SetupInputComponent()
 	{
 		InputSubsystem->ClearAllMappings();
 		SetInputDefault();
+	}
+	auto EnchancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent);
+	auto PlayerInputDataAsset = Cast< UPlayerInputActions>(PlayerInputActions);
+
+	if (EnchancedInputComponent && PlayerInputDataAsset)
+	{
+		EPlayerInputActions::BindInput(EnchancedInputComponent, PlayerInputDataAsset->LeftClick, ETriggerEvent::Completed, this, 
+			&ADefaultPlayerController::HandleLeftClick);
+	}
+
+}
+
+void ADefaultPlayerController::HandleLeftClick()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Left Click Pressed"));
+
+	if (BuildingManager)
+	{
+		BuildingManager->SpawnBuilding();
 	}
 }

@@ -5,6 +5,7 @@
 #include "Building.h"
 
 #include "GameFramework/PlayerController.h"
+#include "DefaultPlayerController.h"
 #include "Engine/World.h"
 
 
@@ -24,12 +25,12 @@ void ABuildingManager::BeginPlay()
 	GameWorld = GetWorld();
 	if (GameWorld)
 	{
-		PlayerController = GameWorld->GetFirstPlayerController();
 
-		//if (PlayerController)
-		//{
-		//	PlayerController->bShowMouseCursor = true;
-		//}
+		PlayerController = Cast<ADefaultPlayerController>(GameWorld->GetFirstPlayerController());
+		if (PlayerController)
+		{
+			PlayerController->SetState(EControllerState::PlacingBuilding);
+		}
 		if (TypeOfBuildingToBeSpawned)
 		{
 			BuildingToBePlaced = GameWorld->SpawnActor<ABuilding>(TypeOfBuildingToBeSpawned);
@@ -42,6 +43,34 @@ void ABuildingManager::BeginPlay()
 void ABuildingManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	SnapBuildingToCursor();
 
+}
+
+void ABuildingManager::SnapBuildingToCursor()
+{
+	if (PlayerController && BuildingToBePlaced)
+	{
+		FHitResult HitResult;
+		bool bIsHit = PlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_GameTraceChannel1, true, HitResult);
+
+		if (bIsHit)
+		{
+			auto MouseLocation = HitResult.Location;
+			BuildingToBePlaced->SetActorLocation(MouseLocation);
+		}
+
+	}
+
+}
+
+void ABuildingManager::SpawnBuilding()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Spawning Building"));
+	if (GameWorld && TypeOfBuildingToBeSpawned /*&& BuildingToBePlaced->CanBePlaced()*/)
+	{
+		//BuildingToBePlaced->PlaceBuilding();
+		BuildingToBePlaced = GameWorld->SpawnActor<ABuilding>(TypeOfBuildingToBeSpawned);
+	}
 }
 
