@@ -4,6 +4,7 @@
 #include "DefaultPlayerController.h"
 #include "BuildingManager.h"
 #include "Kismet/GamePlayStatics.h"
+#include "Framework/SHUD.h"
 
 #include "EnhancedInputSubsystems.h"
 #include "PlayerInputActions.h"
@@ -64,6 +65,12 @@ void ADefaultPlayerController::BeginPlay()
 
 	BuildingManager = Cast<ABuildingManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ABuildingManager::StaticClass()));
 	ensureAlwaysMsgf(BuildingManager, TEXT("no instance of BuildingManager foundb!"));
+
+	//Create HUD
+	if(ASHUD* SHud = Cast<ASHUD>(GetHUD()))
+	{
+		SHud->CreateHUD();
+	}
 
 }
 
