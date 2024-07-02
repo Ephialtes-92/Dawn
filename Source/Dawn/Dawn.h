@@ -3,4 +3,5 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Private/Resources/Resource.h"
 
