@@ -12,15 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Data/Resources/EResourceType.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Data/Resources/ResourceDataAsset.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Data/Resources/ResourceDataAsset.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/Data/DA_StoneResource.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/Data/DA_WoodResource.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/General/UI/BP_SHUD.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/General/UI/W_HUDWidget.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/Dawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Dawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Data/DA_StoneResource.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Data/DA_WoodResource.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "develop",
@@ -532,6 +538,7 @@
       <workItem from="1719938613722" duration="10000" />
       <workItem from="1719938680132" duration="77000" />
       <workItem from="1719938796742" duration="1131000" />
+      <workItem from="1720001113079" duration="3493000" />
     </task>
     <task id="LOCAL-00001" summary="Add Basic HUD and UI">
       <option name="closed" value="true" />

@@ -3,30 +3,34 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "Building.generated.h"
+#include "Dawn/Building.h"
+#include "GatheringBuilding.generated.h"
+
+enum class EResourceType : uint8;
 
 UCLASS()
-class DAWN_API ABuilding : public AActor
+class DAWN_API AGatheringBuilding : public ABuilding
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
-	ABuilding();
 
-	// Called every frame
+public:
+	AGatheringBuilding();
+	
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+
+private:
+	
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Default", meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<class USceneComponent> DefaultSceneRoot;
+	TObjectPtr<UStaticMeshComponent> GatheringRange;
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Default", meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<class UStaticMeshComponent> StaticMeshComponent;
+	EResourceType ResourceType;
+
 	
+
 
 };

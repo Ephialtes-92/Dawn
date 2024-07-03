@@ -1,10 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Resource.generated.h"
+
+class UResourceDataAsset;
 
 UCLASS()
 class DAWN_API AResource : public AActor
@@ -25,8 +25,8 @@ private:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Default", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class UStaticMeshComponent> StaticMeshComponent;
 
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category= "Default", meta = (AllowPrivateAccess = "true"))
-	UDataAsset* ResourceData;
+	UPROPERTY(EditDefaultsOnly, Category= "Default", meta = (AllowPrivateAccess = "true"))
+	UResourceDataAsset* ResourceData;
 
 	
 };
