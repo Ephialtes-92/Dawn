@@ -67,7 +67,7 @@ void ABuildingManager::SnapBuildingToCursor()
 void ABuildingManager::SpawnBuilding()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Building"));
-	if (GameWorld && TypeOfBuildingToBeSpawned /*&& BuildingToBePlaced->CanBePlaced()*/)
+	if (GameWorld && TypeOfBuildingToBeSpawned && BuildingToBePlaced->CanBuildingBePlaced())
 	{
 		//BuildingToBePlaced->PlaceBuilding();
 		BuildingToBePlaced = GameWorld->SpawnActor<ABuilding>(TypeOfBuildingToBeSpawned);

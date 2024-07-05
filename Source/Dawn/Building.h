@@ -17,6 +17,22 @@ public:
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
+    UFUNCTION()
+    void BeginOverlap(UPrimitiveComponent* OverlappedComponent,
+        AActor* OtherActor,
+        UPrimitiveComponent* OtherComp,
+        int32 OtherBodyIndex,
+        bool bFromSweep,
+        const FHitResult& SweepResult);
+
+    UFUNCTION()
+    void EndOverlap(UPrimitiveComponent* OverlappedComponent,
+        AActor* OtherActor,
+        UPrimitiveComponent* OtherComp,
+        int32 OtherBodyIndex);
+
+	bool CanBuildingBePlaced();
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,6 +43,11 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Default", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class UStaticMeshComponent> StaticMeshComponent;
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Default", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<class UBoxComponent> OverlapBox;
+
+	bool CanBePlaced = true;
 	
 
 };

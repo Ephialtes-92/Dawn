@@ -12,20 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/Data/DA_StoneResource.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Dawn/Resources/Data/DA_WoodResource.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Data/DA_StoneResource.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Data/DA_WoodResource.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_Building.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_Building.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/General/BP_BuildingManager.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/General/BP_BuildingManager.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WorldResource.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WorldResource.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Resources/Resource.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,29 +60,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CppCodeGenerationId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CppCodeGenerationId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\ephia\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\ephia\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\ephia\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\ephia\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\ephia\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\ephia\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.Dawn">
     <configuration name="Dawn" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -539,6 +536,11 @@
       <workItem from="1719938680132" duration="77000" />
       <workItem from="1719938796742" duration="1131000" />
       <workItem from="1720001113079" duration="3493000" />
+      <workItem from="1720019980403" duration="981000" />
+      <workItem from="1720021149804" duration="1200000" />
+      <workItem from="1720167162557" duration="1016000" />
+      <workItem from="1720168975478" duration="374000" />
+      <workItem from="1720169363978" duration="1319000" />
     </task>
     <task id="LOCAL-00001" summary="Add Basic HUD and UI">
       <option name="closed" value="true" />

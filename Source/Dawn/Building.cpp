@@ -3,6 +3,8 @@
 
 #include "Building.h"
 
+#include "Components/BoxComponent.h"
+
 // Sets default values
 ABuilding::ABuilding()
 {
@@ -15,6 +17,9 @@ ABuilding::ABuilding()
 	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
 	StaticMeshComponent->SetupAttachment(GetRootComponent());
 
+	OverlapBox = CreateDefaultSubobject<UBoxComponent>(TEXT("OverlapBox"));
+	OverlapBox->SetupAttachment(GetRootComponent());
+
 
 }
 
@@ -22,7 +27,8 @@ ABuilding::ABuilding()
 void ABuilding::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	OverlapBox->OnComponentBeginOverlap.AddDynamic(this, &ABuilding::BeginOverlap);
+	OverlapBox->OnComponentEndOverlap.AddDynamic(this, &ABuilding::EndOverlap);
 }
 
 // Called every frame
@@ -30,5 +36,30 @@ void ABuilding::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABuilding::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (Cast<ABuilding>(OtherActor))
+	{
+		CanBePlaced = false;
+		UE_LOG(LogTemp, Warning, TEXT("Entering Overlap with another building") );
+	}
+}
+
+void ABuilding::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex)
+{
+	if (Cast<ABuilding>(OtherActor))
+	{
+		CanBePlaced = true;
+		UE_LOG(LogTemp, Warning, TEXT("Exiting Overlap with another building") );
+	}
+}
+
+bool ABuilding::CanBuildingBePlaced()
+{
+	return CanBePlaced;
 }
 
