@@ -11,18 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_Building.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_Building.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Buildings/BP_GatheringBuilding.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/General/BP_BuildingManager.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/General/BP_BuildingManager.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WoodResource.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WorldResource.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Resources/BP_WorldResource.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.h" afterDir="false" />
+    <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="small fix">
       <change beforePath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/BuildingManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/BuildingManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +36,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Dawn.uproject" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/DefaultPlayerController.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/BuildingManager.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -540,7 +534,7 @@
       <workItem from="1720021149804" duration="1200000" />
       <workItem from="1720167162557" duration="1016000" />
       <workItem from="1720168975478" duration="374000" />
-      <workItem from="1720169363978" duration="1319000" />
+      <workItem from="1720169363978" duration="1940000" />
     </task>
     <task id="LOCAL-00001" summary="Add Basic HUD and UI">
       <option name="closed" value="true" />
@@ -550,7 +544,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719483992276</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding BoxComponent to building for overlaps">
+      <option name="closed" value="true" />
+      <created>1720170830156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720170830156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="small fix">
+      <option name="closed" value="true" />
+      <created>1720171242600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720171242600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +572,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add Basic HUD and UI" />
     <MESSAGE value="Add Rider files (??)" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Adding BoxComponent to building for overlaps" />
+    <MESSAGE value="small fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

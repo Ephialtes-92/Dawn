@@ -58,7 +58,7 @@ void ABuilding::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 	}
 }
 
-bool ABuilding::CanBuildingBePlaced()
+bool ABuilding::CanBuildingBePlaced() const
 {
 	return CanBePlaced;
 }

@@ -34,10 +34,13 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ABuilding> TypeOfBuildingToBeSpawned;
 
-	class ADefaultPlayerController* PlayerController;
-	class UWorld* GameWorld;
+	UPROPERTY()
+	class ADefaultPlayerController* PlayerController = nullptr;
 
-	void SnapBuildingToCursor();
+	UPROPERTY()
+	class UWorld* GameWorld = nullptr;
+
+	void SnapBuildingToCursor() const;
 
 
 };

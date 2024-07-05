@@ -32,7 +32,7 @@ public:
         UPrimitiveComponent* OtherComp,
         int32 OtherBodyIndex);
 
-	bool CanBuildingBePlaced();
+	bool CanBuildingBePlaced() const;
 
 protected:
 	// Called when the game starts or when spawned

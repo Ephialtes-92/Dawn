@@ -47,14 +47,13 @@ void ABuildingManager::Tick(float DeltaTime)
 
 }
 
-void ABuildingManager::SnapBuildingToCursor()
+void ABuildingManager::SnapBuildingToCursor() const
 {
 	if (PlayerController && BuildingToBePlaced)
 	{
 		FHitResult HitResult;
-		bool bIsHit = PlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_GameTraceChannel1, true, HitResult);
 
-		if (bIsHit)
+		if (bool bIsHit = PlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_GameTraceChannel1, true, HitResult))
 		{
 			auto MouseLocation = HitResult.Location;
 			BuildingToBePlaced->SetActorLocation(MouseLocation);
