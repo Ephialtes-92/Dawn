@@ -44,7 +44,7 @@ void ABuilding::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	if (Cast<ABuilding>(OtherActor))
 	{
 		CanBePlaced = false;
-		UE_LOG(LogTemp, Warning, TEXT("Entering Overlap with another building") );
+		// UE_LOG(LogTemp, Warning, TEXT("Entering Overlap with another building") );
 	}
 }
 
@@ -54,7 +54,7 @@ void ABuilding::EndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Oth
 	if (Cast<ABuilding>(OtherActor))
 	{
 		CanBePlaced = true;
-		UE_LOG(LogTemp, Warning, TEXT("Exiting Overlap with another building") );
+		// UE_LOG(LogTemp, Warning, TEXT("Exiting Overlap with another building") );
 	}
 }
 

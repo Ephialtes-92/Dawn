@@ -17,7 +17,7 @@ class DAWN_API UResourceDataAsset : public UDataAsset
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Data")
-	EResourceType ResourceType; //Or maybe a resource enum
+	EResourceType ResourceType; 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Data")
 	float GatherRate;

@@ -19,7 +19,9 @@ AGatheringBuilding::AGatheringBuilding()
 void AGatheringBuilding::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	GatheringRange->OnComponentBeginOverlap.AddDynamic(this, &AGatheringBuilding::BeginOverlapWithResource);
+	GatheringRange->OnComponentEndOverlap.AddDynamic(this, &AGatheringBuilding::EndOverlapWithResource);
+
 }
 
 // Called every frame
@@ -27,4 +29,17 @@ void AGatheringBuilding::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+
+void AGatheringBuilding::BeginOverlapWithResource(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	
+}
+
+void AGatheringBuilding::EndOverlapWithResource(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	int32 OtherBodyIndex)
+{
+	
+}
+
 

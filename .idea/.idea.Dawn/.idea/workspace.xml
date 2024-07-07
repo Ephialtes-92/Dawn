@@ -11,9 +11,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="small fix">
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/BuildingManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Dawn/BuildingManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/BuildingManager.h" afterDir="false" />
+    <list default="true" id="ca166594-a576-40f7-8b0f-cd536cd5a4be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Content/Dawn/Characters/BP_Villager.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Characters/Villager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Dawn/Private/Characters/Villager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dawn/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dawn/Maps/BasicMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Building.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Building.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Buildings/GatheringBuilding.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Dawn/Private/Data/Resources/ResourceDataAsset.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Dawn/Private/Data/Resources/ResourceDataAsset.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +49,7 @@
     <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/Building.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/BuildingManager.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/ephia/Documents/Unreal Projects/Dawn/Source/Dawn/BuildingManager.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -534,7 +544,7 @@
       <workItem from="1720021149804" duration="1200000" />
       <workItem from="1720167162557" duration="1016000" />
       <workItem from="1720168975478" duration="374000" />
-      <workItem from="1720169363978" duration="1940000" />
+      <workItem from="1720169363978" duration="4591000" />
     </task>
     <task id="LOCAL-00001" summary="Add Basic HUD and UI">
       <option name="closed" value="true" />
@@ -560,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720171242600</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="small fix">
+      <option name="closed" value="true" />
+      <created>1720171334730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720171334730</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
